@@ -1,0 +1,79 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.7, user-scalable=0">
+  <title>Javascript Space Shooter 👾</title>
+  <link rel="stylesheet" href="css/space-shooter.css">
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <div style="padding: 48px 0;">
+    <h2 style="margin: 32px auto; text-align: center">Space Shooter</h2>
+    <br>
+    <div id="canvas-wrapper">
+      <canvas id="game-canvas" width="400px" height="600px"></canvas>
+      <form id="highscore-form" autocomplete="off">
+        <input type="text" id="name-input" placeholder="Enter Name" maxlength="10">
+      </form>
+      <article id="about">
+        <p>
+          I built this game using HTML Canvas and Vanilla JavaScript for the frontend. In the backend I run my own Node JS application linked to my SQL database, both running on Heroku. Via Node I post and receive highscores from my database. I implemented gamepad support via gamepad API.
+        </p>
+        <p>
+          Hit multiple enemies in a row without missing a shot to get a score multiplier. 10 hits in a row doubles the points you earn. 20 hits give you a triple bonus. The game consists of three looping levels with increasing speed.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <button onclick="soundControl()" id="sound-button">&#128266;</button>
+
+  <button id="hamburger" onclick="showMenu()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </button>
+
+  <div id="burger-menu">
+    <ul>
+      <li>
+        <a href="index">Home</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://react-travelblog.netlify.app/" target="_blank">React Travel Blog</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="shooter">JS Space Shooter</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://AngusTripleH.itch.io/school-fight">School Fight</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="pong">JS Pong</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://adoring-galileo-71fde2.netlify.app/">React Todo App</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="templelooter">Temple Looter</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://vue-mealplanner.netlify.app/">Vue Meal Planner</a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./js/shooter.js"></script>
+
+</body>
+
+</html>

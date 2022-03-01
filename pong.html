@@ -1,0 +1,107 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=0.6">
+  <title>Javascript Pong 🏓</title>
+  <link rel="stylesheet" href="css/pong.css">
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+</head>
+
+<body>
+
+  <button onclick="soundControl()" id="sound-button">&#128266;</button>
+
+
+  <audio src="sounds/bounce.wav" id="bounce"></audio>
+  <audio src="sounds/cheer2.wav" id="cheer2"></audio>
+  <audio src="sounds/cheer.mp3" id="cheer1"></audio>
+  <audio src="sounds/bounce1.wav" id="bounce1"></audio>
+  <audio src="sounds/victory.wav" id="victory"></audio>
+  <audio src="sounds/bounce-wall.wav" id="bounceWall"></audio>
+
+
+
+  <button id="hamburger" onclick="showMenu()">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+  </button>
+
+  <div id="burger-menu">
+    <ul>
+      <li>
+        <a href="index">Home</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://react-travelblog.netlify.app/" target="_blank">React Travel Blog</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="shooter">JS Space Shooter</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://AngusTripleH.itch.io/school-fight">School Fight</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="pong">JS Pong</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="https://adoring-galileo-71fde2.netlify.app/">React Todo App</a>
+      </li>
+      <hr class="nav-line">
+      <li>
+        <a href="templelooter">Temple Looter</a>
+      </li>
+      <hr class="nav-line">
+            <li>
+                <a href="https://vue-mealplanner.netlify.app/">Vue Meal Planner</a>
+            </li>
+    </ul>
+  </div>
+
+    <h2>Pong</h2>
+
+    <canvas id="game-canvas" width="800px" height="600px">
+    </canvas>
+    <br>
+    <article class="controls">
+      Controls P1: WASD | Controls P2: ARROWKEYS<br>
+
+      <div id="game-settings">
+        <input class="option-input" type="color" id="color-picker-p1" value="#ed3d0d">
+        <label>&nbsp Choose color P1</label>
+        <br>
+        <input class="option-input" type="color" id="color-picker-p2" value="#26ed17">
+        <label>&nbsp Choose color P2</label>
+        <br>
+        <input class="option-input" type="range" id="game-speed" min="100" max="200" value="100">
+        <label>&nbsp Set gamespeed &nbsp</label>
+        <br><br>
+        <input class="playmode-input" name="playmode" id="1player-mode" type="radio" checked>
+        <label>1 Player &nbsp</label>
+        <input class="playmode-input" name="playmode" id="2player-mode" type="radio">
+        <label>2 Player</label>
+      </div>
+
+      <button id="start-button" onclick="startGame()">
+        &#127955; Start &#127955;
+      </button>
+
+    </article>
+
+    <article id="description">
+      To start with Javascript I took a Udemy course on how to build Pong using Javascript and HTML Canvas.
+      I implemented a collision detection, sounds, an AI opponent and gamepad support via gamepad API.
+    </article>
+
+
+
+  <script src="./js/pong.js"></script>
+
+</body>
+
+</html>
